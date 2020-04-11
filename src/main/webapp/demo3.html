@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>v-on:keydown</title>
+		<script src="./node_modules/vue/dist/vue.js"></script>
+	</head>
+
+	<body>
+		<div id="app">
+			<input type="text" v-on:keydown="hello($event)">
+
+			{{name}}
+		</div>
+
+
+	</body>
+	<script>
+		//view model
+		new Vue({
+			el:"#app",
+			data:{
+				name:"yang"
+			},
+			methods:{
+				hello:function (event) {
+					event.preventDefault();
+
+				}
+			}
+		});
+	</script>
+	
+	
+
+</html>

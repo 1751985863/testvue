@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>v-on:click</title>
+		<script src="node_modules/vue/dist/vue.js"></script>
+	</head>
+	<body>
+		<div id="app">
+			{{message}}  <br>
+			<button v-on:click="add" >vue的onclick</button>
+		</div>
+	</body>
+	<script>
+		//view model
+		var vn=new Vue({
+			el:"#app",
+			data:{
+				message:55
+			},
+			method:{
+				add:function () {
+					this.message++;
+
+				}
+			}
+		});
+		
+	</script>
+</html> 
